@@ -1,4 +1,4 @@
-# AWS with Terraform
+# Deploying to AWS with Ansible and Terraform - Linux Academy
 ## Setup 
 On Ubuntu 16
 Perform as root
