@@ -50,3 +50,23 @@ Perform as root
 `mkdir terransible`
 
 `cd terransible`
+
+## AWS - IAM and DNS Setup
+
+In IAM create a new user _terransible_, give it programmatic access, add existing policies *AdministratorAccess* and download credentials.
+
+In Route53, use an existing domain or register a new domain
+
+Back on the user terminal (from the above setup) run
+
+`aws configure --profile myprofile` -> Enter downloaded credentials, defualt region, format default None
+
+To check the setup run
+
+`aws ec2 describe-instances --profile myprofile`
+
+To configure route53 run
+
+`aws route53 create-reusable-delegation-set --caller-reference 1224 --profile myprofile` -> caller-reference is any 4 digit no, copy the response json into a file for later use
+
+In Route53, go to registered domains, go to add or edit nameservers and add the servers obtained from the previous command
