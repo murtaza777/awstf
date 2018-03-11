@@ -70,3 +70,11 @@ To configure route53 run
 `aws route53 create-reusable-delegation-set --caller-reference 1224 --profile myprofile` -> caller-reference is any 4 digit no, copy the response json into a file for later use
 
 In Route53, go to registered domains, go to add or edit nameservers and add the servers obtained from the previous command
+
+## Terraform init and IAM
+
+`terraform init`
+
+`terraform plan`
+
+Modify main.tf and run `terraform plan` again
